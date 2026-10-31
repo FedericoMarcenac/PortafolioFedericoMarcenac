@@ -1,3 +1,4 @@
+<img width="1897" height="949" alt="Captura de pantalla 2026-10-31 174840" src="https://github.com/user-attachments/assets/b0688264-cb05-4113-a272-8f35c961a682" />
 # Federico Marcenac | Portfolio
 
 Portfolio personal de **Federico Marcenac**, estudiante de la Tecnicatura Universitaria en Programación en UTN Bahía Blanca, interesado en el desarrollo de software, desarrollo web y tecnología IT.

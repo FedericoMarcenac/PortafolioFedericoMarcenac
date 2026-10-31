@@ -1,5 +1,26 @@
+import { useState } from 'react';
 import Section from '../components/Section';
 import { projects } from '../data/content';
+
+const src = (p: string) => import.meta.env.BASE_URL + p;
+
+function Gallery({ name, images }: { name: string; images: string[] }) {
+  const [i, setI] = useState(0);
+  return (
+    <div className="gallery">
+      <div className="thumb"><img src={src(images[i])} alt={`Captura ${i + 1} de ${name}`} loading="lazy" /></div>
+      {images.length > 1 && (
+        <div className="shots" role="group" aria-label={`Capturas de ${name}`}>
+          {images.map((im, k) => (
+            <button key={im} type="button" aria-label={`Ver captura ${k + 1}`} aria-pressed={k === i} onClick={() => setI(k)}>
+              <img src={src(im)} alt="" loading="lazy" />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Projects() {
   return (
@@ -7,9 +28,7 @@ export default function Projects() {
       <div className="grid g2">
         {projects.map((p) => (
           <article key={p.name} className="card reveal project">
-            <div className="thumb">
-              {p.image ? <img src={p.image} alt={`Captura de ${p.name}`} loading="lazy" /> : <span aria-hidden="true">{p.name}</span>}
-            </div>
+            <Gallery name={p.name} images={p.images} />
             <div className="pbody">
               <p className="status mono">{p.status}</p>
               <h3>{p.name}</h3>

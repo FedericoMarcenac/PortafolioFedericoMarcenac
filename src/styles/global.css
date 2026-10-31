@@ -115,3 +115,11 @@ main,.nav{position:relative}
  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
  .reveal{opacity:1!important;transform:none!important}
 }
+
+.gallery{border-bottom:1px solid var(--line)}
+.gallery .thumb{border:0;padding:0;aspect-ratio:16/9}
+.gallery .thumb img{object-position:top}
+.shots{display:flex;gap:8px;padding:10px;background:rgba(5,11,24,.8)}
+.shots button{flex:1;aspect-ratio:16/9;padding:0;border:1px solid var(--line);border-radius:3px;overflow:hidden;cursor:pointer;opacity:.6;background:none;transition:opacity .2s,border-color .2s}
+.shots button:hover,.shots button[aria-pressed=true]{opacity:1;border-color:var(--cyan)}
+.shots img{width:100%;height:100%;object-fit:cover;object-position:top}

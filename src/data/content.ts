@@ -35,7 +35,7 @@ export const techGroups: { title: string; items: [string, Level][] }[] = [
 
 export type Project = {
   name: string; description: string; features: string[]; stack: string[];
-  status: string; repo: string; demo?: string; image?: string; // image: ruta en /public (ej: '/ettonazzem.png')
+  status: string; repo: string; demo?: string; images: string[]; // capturas en /public/img (la primera es la principal)
 };
 
 // Para sumar un proyecto, copiá un bloque y agregalo a esta lista.
@@ -45,6 +45,7 @@ export const projects: Project[] = [
     description: 'Sitio web para un comercio real de librería comercial y escolar, computación y descartables.',
     features: ['Productos organizados por categorías', 'Información del comercio', 'Navegación entre secciones', 'Diseño responsive', 'Contacto por WhatsApp'],
     stack: ['HTML5', 'CSS3', 'Bootstrap 5.3.1'], status: 'Publicado',
+    images: ['img/etto-1.webp', 'img/etto-2.webp', 'img/etto-3.webp'],
     repo: 'https://github.com/FedericoMarcenac/paginaEttonazzem',
     demo: 'https://federicomarcenac.github.io/paginaEttonazzem/index.html',
   },
@@ -53,6 +54,7 @@ export const projects: Project[] = [
     description: 'Sitio personal para presentar mi perfil y servicios.',
     features: ['Página de inicio', 'Sección sobre mí', 'Sección de presupuesto', 'Página de contacto', 'Diseño responsive'],
     stack: ['HTML5', 'CSS3', 'Bootstrap', 'Git y GitHub'], status: 'Publicado',
+    images: ['img/fede-1.webp', 'img/fede-2.webp', 'img/fede-3.webp'],
     repo: 'https://github.com/FedericoMarcenac/fedePagina',
     demo: 'https://federicomarcenac.github.io/fedePagina/index.html',
   },
